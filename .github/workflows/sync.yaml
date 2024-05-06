@@ -4,11 +4,11 @@ jobs:
   sync_job:
     runs-on: ubuntu-latest
     name: lalala
+    permissions: write-all
     steps:
       - name: Sync
         id: sync
         uses: berndruecker/github-action-sync-milestones@main
-        permissions: write-all
         with:
           who-to-greet: 'Mona the Octocat'
           github-token:  ${{ secrets.GITHUB_TOKEN }}
