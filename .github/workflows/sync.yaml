@@ -1,0 +1,15 @@
+on: [workflow_dispatch]
+
+jobs:
+  sync_job:
+    runs-on: ubuntu-latest
+    name: lalala
+    steps:
+      - name: Sync
+        id: sync
+        uses: berndruecker/github-action-sync-milestones@v1.1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
