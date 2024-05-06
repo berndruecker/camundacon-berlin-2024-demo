@@ -12,7 +12,7 @@ jobs:
           who-to-greet: 'Mona the Octocat'
           github-token:  ${{ secrets.GITHUB_TOKEN }}
           webmodeler-client-id:  ${{ secrets.CAMUNDA_WEBMODELER_CLIENT_ID }}
-          webmodeler-client-secret:  ${{ secrets.CAMUNDA_WEBMODELER_CLIENT_SECRETS }}
+          webmodeler-client-secret:  ${{ secrets.CAMUNDA_WEBMODELER_CLIENT_SECRET }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
