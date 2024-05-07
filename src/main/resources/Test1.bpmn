@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="fb20fa0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0" camunda:diagramRelationId="1f8372cd-0ca0-4fed-bde1-81b83cf8a10c">
+  <bpmn:process id="Process_1sin6n0" name="Test1" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formId="Form_1xgrhr5" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_0ua8lgz</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0ua8lgz" sourceRef="StartEvent_1" targetRef="Activity_0gu0df6" />
+    <bpmn:serviceTask id="Activity_0gu0df6" name="Send Email" zeebe:modelerTemplate="78718414-e647-4789-baf7-76f7fd3bf015" zeebe:modelerTemplateVersion="1715069895554" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTIwMHB0IiBoZWlnaHQ9IjEyMDBwdCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTIwMCAxMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGcgZmlsbD0iI2ZiNWMwYyI+CiAgPHBhdGggZD0ibTExMS40NyA0OTguODljLTcuNjQwNiAxNC45MDYtMTEuNDg0IDMxLjIxOS0xMS40ODQgNDguMzI4djQ0My4yNmMwIDYwLjM3NSA0OS4xMjUgMTA5LjUgMTA5LjUgMTA5LjVoNzgwLjk4YzYwLjM3NSAwIDEwOS41LTQ5LjEyNSAxMDkuNS0xMDkuNXYtNDQzLjI2YzAtMTcuMTU2LTMuODQzOC0zMy40MjItMTEuMTA5LTQ3LjU3OC05Ljk4NDQtMjEuMjgxLTI2LjM0NC0zOC4yOTctNDcuMjAzLTQ5LjI2NmwtNjYuNjU2LTM1LjE1NnYtMjE1LjIxYzAtNTUuMTcyLTQ0Ljg1OS05OS45ODQtOTkuOTg0LTk5Ljk4NGgtNTUwLjAzYy01NS4xNzIgMC05OS45ODQgNDQuODU5LTk5Ljk4NCA5OS45ODR2MjE1LjIxbC02Ni42MDkgMzUuMTA5Yy0yMC45NTMgMTAuOTY5LTM3LjMxMiAyNy45ODQtNDYuOTIyIDQ4LjUxNnptMzcwLjgyIDI4MC4wOC0zMzAuMjggMjI1Ljk4Yy0xLjE3MTktNC42NDA2LTEuOTY4OC05LjQ2ODgtMS45Njg4LTE0LjQzOHYtNDM4Ljk0bDMzMi4yOSAyMjcuMzl6bS0yNzIuODEgMjcxLjAzYy05LjI4MTIgMC0xOC0yLjM0MzgtMjUuODI4LTYuMTQwNmwzODcuOTgtMjY1LjRjMTcuMjUtMTEuODEyIDM5LjUxNi0xMS44NTkgNTYuNzY2IDAuMDQ2ODc1bDM4Ny45NCAyNjUuMzZjLTcuODI4MSAzLjg0MzgtMTYuNTQ3IDYuMTQwNi0yNS44MjggNi4xNDA2em04NDAuNTItNDk4LjQydjQzOC45NGMwIDUuMDE1Ni0wLjc5Njg4IDkuNzk2OS0xLjk2ODggMTQuNDM4bC0zMzAuMjgtMjI1Ljk4IDMzMi4yOS0yMjcuMzl6bS0zMS41OTQtNTYuOTA2YzQuNzM0NCAyLjQ4NDQgOC43MTg4IDUuODEyNSAxMi41MTYgOS40MjE5bC01NS45MjIgMzguMjk3di03MC41OTR6bS02OTMuNDItMzQ0LjY4aDU0OS45OGMyNy41NjIgMCA1MC4wMTYgMjIuNDA2IDUwLjAxNiA1MC4wMTZ2Mzc2LjU1bC0yNTEuNTMgMTcyLjEzLTE2Ljc4MS0xMS40ODRjLTM0LjQwNi0yMy42NzItNzguODkxLTIzLjY3Mi0xMTMuMzQtMC4wNDY4NzVsLTE2LjgyOCAxMS41MzEtMjUxLjUzLTE3Mi4xM3YtMzc2LjU1YzAtMjcuNTYyIDIyLjQwNi01MC4wMTYgNTAuMDE2LTUwLjAxNnptLTk5Ljk4NCAzMjEuNzl2NzAuNTk0bC01NS45NjktMzguMjk3YzMuNzk2OS0zLjU2MjUgNy44MjgxLTYuOTM3NSAxMi42MDktOS40MjE5bDQzLjMxMi0yMi44Mjh6Ii8+CiAgPHBhdGggZD0ibTU2Mi4xOCA2MjEuNTJjMTIuODQ0IDIuMzkwNiAyNS42NDEgMy41NjI1IDM4LjI5NyAzLjU2MjUgNDQuMjAzIDAgODYuNDg0LTE0LjM0NCAxMjEuODItNDEuODU5IDEwLjkyMi04LjQ4NDQgMTIuODkxLTI0LjE4OCA0LjM1OTQtMzUuMDYyLTguMzkwNi0xMC44NzUtMjQuMTQxLTEyLjkzOC0zNS4wNjItNC4zNTk0LTM0LjAzMSAyNi40ODQtNzYuNzM0IDM2LjU2Mi0xMjAuMzIgMjguNTk0LTU5LjYyNS0xMC45NjktMTA3LjItNTguMzEyLTExOC40NS0xMTcuODQtOS40Njg4LTUwLjEwOSA1LjI5NjktOTkuMzI4IDQwLjQ1My0xMzQuOSAzNS4xNTYtMzUuNjI1IDg0LjA5NC01MC45MDYgMTM0LjI5LTQyLjE4OCA1Ny4xNDEgMTAuMDc4IDEwNC42NyA1NC44NDQgMTE4LjE3IDExMS4zOCAzLjkzNzUgMTYuNDA2IDUuMTU2MiAzMy4wNDcgMy43MDMxIDQ5LjM1OS0xLjM1OTQgMTUuNjU2LTE0LjA2MiAyNy40NjktMjkuNDM4IDI3LjQ2OS0xNi4xNzIgMC0yOS4zNDQtMTMuMTcyLTI5LjM0NC0yOS4zNDR2LTYxLjI2NmMwLTEzLjgyOC0xMS4xNTYtMjQuOTg0LTI0Ljk4NC0yNC45ODQtNC4wNzgxIDAtNy44MjgxIDEuMjE4OC0xMS4yMDMgMi45NTMxLTE1LjE4OC0xMS40ODQtMzMuODkxLTE4LjYwOS01NC40MjItMTguNjA5LTQ5Ljk2OSAwLTkwLjYwOSA0MC42NDEtOTAuNjA5IDkwLjYwOXM0MC42NDEgOTAuNjA5IDkwLjYwOSA5MC42MDljMjQuMTg4IDAgNDYuMDc4LTkuNjU2MiA2Mi4zNDQtMjUuMTcyIDE0LjQ4NCAxNS40MjIgMzQuODc1IDI1LjE3MiA1Ny42MDkgMjUuMTcyIDQxLjUzMSAwIDc1LjU2Mi0zMS40MDYgNzkuMjY2LTczLjAzMSAxLjkyMTktMjEuNzAzIDAuMjgxMjUtNDMuNzM0LTQuOTIxOS02NS4zOTEtMTguMDk0LTc1LjYwOS04MS42NTYtMTM1LjUyLTE1OC4xMS0xNDkuMDItNjYuNDY5LTExLjY3Mi0xMzEuNjggOC44MTI1LTE3OC41NSA1Ni4yOTdzLTY2LjU2MiAxMTIuODMtNTQgMTc5LjM0YzE1LjA0NyA3OS42ODggNzguNzUgMTQzLjA2IDE1OC41MyAxNTcuNzR6bTM3LjgyOC0xNTUuOWMtMjIuNDA2IDAtNDAuNjQxLTE4LjIzNC00MC42NDEtNDAuNjQxczE4LjIzNC00MC42NDEgNDAuNjQxLTQwLjY0MSA0MC42NDEgMTguMjM0IDQwLjY0MSA0MC42NDEtMTguMjM0IDQwLjY0MS00MC42NDEgNDAuNjQxeiIvPgogPC9nPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:sendgrid:1" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="{{secrets.SENDGRID_APIKEY}}" target="apiKey" />
+          <zeebe:input source="Camunda Demo" target="from.name" />
+          <zeebe:input source="demo@camunda.com" target="from.email" />
+          <zeebe:input source="Bernd" target="to.name" />
+          <zeebe:input source="bernd.it.depends.ruecker@gmail.com" target="to.email" />
+          <zeebe:input source="mail" target="unMappedFieldNotUseInModel.mailType" />
+          <zeebe:input source="Hallo Bernd" target="content.subject" />
+          <zeebe:input source="text/plain" target="content.type" />
+          <zeebe:input source="From Camunda Con" target="content.value" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="retryBackoff" value="PT1S" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0ua8lgz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0x6ek5l</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1xfsg8u">
+      <bpmn:incoming>Flow_0x6ek5l</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0x6ek5l" sourceRef="Activity_0gu0df6" targetRef="Event_1xfsg8u" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1sin6n0">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="150" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1xfsg8u_di" bpmnElement="Event_1xfsg8u">
+        <dc:Bounds x="402" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1h3sln0_di" bpmnElement="Activity_0gu0df6">
+        <dc:Bounds x="230" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0ua8lgz_di" bpmnElement="Flow_0ua8lgz">
+        <di:waypoint x="186" y="118" />
+        <di:waypoint x="208" y="118" />
+        <di:waypoint x="208" y="190" />
+        <di:waypoint x="230" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0x6ek5l_di" bpmnElement="Flow_0x6ek5l">
+        <di:waypoint x="330" y="190" />
+        <di:waypoint x="366" y="190" />
+        <di:waypoint x="366" y="118" />
+        <di:waypoint x="402" y="118" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
