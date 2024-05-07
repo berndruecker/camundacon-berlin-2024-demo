@@ -10,9 +10,9 @@ jobs:
         id: sync
         uses: berndruecker/github-action-sync-milestones@main
         env:
-          ZEEBE_ADDRESS: ${{ secrets.CAMUNDA_ZEEBE_ADDRESSS }},
-          ZEEBE_CLIENT_ID: ${{ secrets.CAMUNDA_CLIENT_ID }},
-          ZEEBE_CLIENT_SECRET: ${{ secrets.CAMUNDA_CLIENT_SECRET }},
+          ZEEBE_ADDRESS: ${{ secrets.CAMUNDA_ZEEBE_ADDRESSS }}
+          ZEEBE_CLIENT_ID: ${{ secrets.CAMUNDA_CLIENT_ID }}
+          ZEEBE_CLIENT_SECRET: ${{ secrets.CAMUNDA_CLIENT_SECRET }}
           CAMUNDA_OAUTH_URL: 'https://login.cloud.camunda.io/oauth/token'
         with:
           who-to-greet: 'Mona the Octocat'
