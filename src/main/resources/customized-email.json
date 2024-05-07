@@ -1,0 +1,237 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "customized-email",
+  "id": "780a9cbd-d1d4-4681-928d-06fa22ec1c54",
+  "version": 1701244238903,
+  "description": "Send an email (SendGrid is used in the background)",
+  "documentationRef": "https://docs.camunda.io/docs/components/connectors/out-of-the-box-connectors/sendgrid/",
+  "icon": {
+    "contents": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTIwMHB0IiBoZWlnaHQ9IjEyMDBwdCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTIwMCAxMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPHBhdGggZD0ibTExMzQuOSA3NDEuNTljMCAxNy4yNjItNy4wNTg2IDMzLjAwOC0xOC40NDEgNDQuNDA2LTExLjQ2NSAxMS40NTMtMjcuMjExIDE4LjUxMi00NC40NzcgMTguNTEyLTE1LjI3NyAwLTI5LjMwOS01LjUtNDAuMjIzLTE0LjU5OC0yLjEyNSAyLjc5My00LjQ0OTIgNS40Mjk3LTYuOTE4IDcuOTEwMi0xNC4zODcgMTQuMzcxLTM0LjI3IDIzLjI3My01Ni4yMzggMjMuMjczLTIxLjg3MSAwLTQxLjc0Mi04LjkxNDEtNTYuMTI1LTIzLjI3My0xNC40NTctMTQuMzcxLTIzLjM1OS0zNC4yODUtMjMuMzU5LTU2LjIyNyAwLTIxLjg4MyA4LjkxNDEtNDEuNzU0IDIzLjI3My01Ni4xNDEgMTQuNDczLTE0LjQ0MSAzNC4zNDQtMjMuMzU5IDU2LjIxMS0yMy4zNTkgMjEuOTQxIDAgNDEuODU1IDguOTAyMyA1Ni4yMzggMjMuMjg1IDE0LjM1OSAxNC40NTcgMjMuMjczIDM0LjMyOCAyMy4yNzMgNTYuMzUyIDAuMDcwMzEyIDYuNjYwMiAyLjczNDQgMTIuNTQzIDYuOTQ1MyAxNi43NjYgNC4yOTMgNC4yODEyIDEwLjI4OSA2Ljk0NTMgMTYuOTIyIDYuOTQ1MyA2LjYxNzIgMCAxMi42MDItMi42MzY3IDE2Ljg2Ny02LjkxOCA0LjM1MTYtNC4zMzU5IDYuOTg4My0xMC4zMTYgNy0xNi45MzggMC4wMTU2MjYtMzUuMjA3LTE0LjIwMy02Ny4wMjctMzcuMTc2LTg5Ljk4OC0yMy4wMzEtMjMuMDQ3LTU0Ljg2My0zNy4yNjItOTAuMDctMzcuMjYyLTM1LjE4IDAtNjcuMDEyIDE0LjIxNS04OS45NzMgMzcuMTkxLTIzLjA0NyAyMy4wMzEtMzcuMjc3IDU0Ljg3OS0zNy4yNzcgOTAuMDU5IDAgMzUuMTkxIDE0LjIzIDY3LjAzOSAzNy4yMDMgODkuOTg4IDIzLjAzMSAyMy4wNDcgNTQuODUyIDM3LjI3NyA5MC4wNDMgMzcuMjc3IDE1LjM3OSAwIDMwLjA0Ny0yLjY5MTQgNDMuNTEyLTcuNTgyIDE0LjA0Ny01LjEwMTYgMjYuOTg0LTEyLjY1NiAzOC4yODEtMjIuMTA5bDI1LjAzMSAyOS44OTFjLTE0LjY4NCAxMi4zMDEtMzEuNjA1IDIyLjE1Mi01MC4wMiAyOC44NDQtMTcuODE2IDYuNDc2Ni0zNi45NDkgMTAuMDA4LTU2LjgwOSAxMC4wMDgtNDUuODA5IDAtODcuMzk1LTE4LjYwOS0xMTcuNTEtNDguNjk5LTMwLjE2LTMwLjIwMy00OC43ODUtNzEuODAxLTQ4Ljc4NS0xMTcuNjFzMTguNjI1LTg3LjQwNiA0OC43MTUtMTE3LjUyYzMwLjE4OC0zMC4xNiA3MS43ODktNDguNzg1IDExNy41OC00OC43ODUgNDUuODI0IDAgODcuNDIyIDE4LjYyNSAxMTcuNTQgNDguNzE1IDMwLjE2IDMwLjE4OCA0OC43ODUgNzEuNzczIDQ4Ljc1OCAxMTcuNnptLTEzNy42NS0yOC42MjljLTcuMzI4MS03LjI2OTUtMTcuNDc3LTExLjgwNS0yOC42NDUtMTEuODA1LTExLjE4NCAwLTIxLjMzMiA0LjUzNTItMjguNjI5IDExLjgwNS03LjI2OTUgNy4yODUyLTExLjgwNSAxNy40MzQtMTEuODA1IDI4LjYyOSAwIDExLjE1NiA0LjUzNTIgMjEuMzAxIDExLjg0OCAyOC42MTcgNy4yNTc4IDcuMzAwOCAxNy40MDYgMTEuODM2IDI4LjU4NiAxMS44MzYgMTEuMTg0IDAgMjEuMzE2LTQuNTM1MiAyOC42MTctMTEuODM2IDcuMTI4OS03LjEyODkgMTEuNjM3LTE2Ljk1MyAxMS44NDgtMjguMzU5IDAtMTEuNDUzLTQuNTM1Mi0yMS42MDItMTEuODItMjguODg3em0tOTQyLjgtNDQ5Ljg5IDQ3Ny4xNiAzNzQuOTZjMjAuMzQgMTUuOTczIDQ0LjM3NSAyMy45OCA2OC4zODcgMjMuOTggMjMuOTk2IDAgNDguMDQ3LTguMDA3OCA2OC4zNzEtMjMuOThsNDc3LjE2LTM3NC45NmMtMTMuMDgyLTExLjc5My0zMC4zNTktMTkuMDA4LTQ5LjIyMy0xOS4wMDhoLTk5Mi42M2MtMTguODUyIDAtMzYuMTQxIDcuMjE0OC00OS4yMjMgMTkuMDA4em0xMTEyLjIgMzIuOTUzLTQ3NC4yMSAzNzIuNjZjLTI3LjQ1MyAyMS41Ny01OS45OCAzMi4zNzEtOTIuNDggMzIuMzcxLTMyLjUxMiAwLTY1LjAyNy0xMC44MDEtOTIuNDk2LTMyLjM3MWwtNDc0LjIxLTM3Mi42NmMtMi4xNDA2IDYuODc1LTMuMzAwOCAxNC4xODgtMy4zMDA4IDIxLjcyN3Y1NjQuNWMwIDIwLjIzOCA4LjMwNDcgMzguNjY0IDIxLjY1NiA1Mi4wMzEgMTMuMzY3IDEzLjM1MiAzMS44MDUgMjEuNjU2IDUyLjAzMSAyMS42NTZoOTkyLjYzYzIwLjI1NCAwIDM4LjY2NC04LjMwNDcgNTIuMDMxLTIxLjY1NiAxMy4zNjctMTMuMzY3IDIxLjY1Ni0zMS43ODkgMjEuNjU2LTUyLjAzMXYtNTY0LjVjMC03LjUzOTEtMS4xNjQxLTE0Ljg0LTMuMzAwOC0yMS43Mjd6IiBmaWxsPSIjZWMwMDE2Ii8+Cjwvc3ZnPgo="
+  },
+  "category": {
+    "id": "connectors",
+    "name": "Connectors"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "groups": [
+    {
+      "id": "authentication",
+      "label": "Authentication"
+    },
+    {
+      "id": "sender",
+      "label": "Sender"
+    },
+    {
+      "id": "receiver",
+      "label": "Receiver"
+    },
+    {
+      "id": "content",
+      "label": "Compose email"
+    },
+    {
+      "id": "errors",
+      "label": "Error handling"
+    },
+    {
+      "id": "expert",
+      "label": "Expert configuration"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda:sendgrid:1",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "label": "SendGrid API key",
+      "type": "Hidden",
+      "value": "{{secrets.SENDGRID}}",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "apiKey"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Name",
+      "group": "sender",
+      "type": "Hidden",
+      "value": "Camunda Demo",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "from.name"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Email address",
+      "group": "sender",
+      "type": "Hidden",
+      "value": "demo@camunda.com",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "from.email"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Recepient Name",
+      "group": "content",
+      "type": "String",
+      "value": "Bernd Rücker",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "to.name"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Recepient Email address",
+      "group": "content",
+      "type": "String",
+      "value": "bernd.it.depends.ruecker@gmail.com",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "to.email"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "id": "mailType",
+      "group": "content",
+      "value": "mail",
+      "type": "Hidden",
+      "choices": [
+        {
+          "name": "Simple (no dynamic template)",
+          "value": "mail"
+        },
+        {
+          "name": "Using dynamic template",
+          "value": "byTemplate"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "unMappedFieldNotUseInModel.mailType"
+      }
+    },
+    {
+      "label": "Subject",
+      "group": "content",
+      "type": "String",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "content.subject"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "mailType",
+        "equals": "mail"
+      }
+    },
+    {
+      "label": "Content type",
+      "group": "content",
+      "type": "Hidden",
+      "value": "text/plain",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "content.type"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "mailType",
+        "equals": "mail"
+      }
+    },
+    {
+      "label": "Body (plain text)",
+      "group": "content",
+      "type": "Text",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "content.value"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "mailType",
+        "equals": "mail"
+      }
+    },
+    {
+      "label": "Template ID",
+      "group": "content",
+      "type": "String",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "template.id"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "mailType",
+        "equals": "byTemplate"
+      }
+    },
+    {
+      "label": "Template data",
+      "group": "content",
+      "type": "Text",
+      "feel": "required",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "template.data"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "condition": {
+        "property": "mailType",
+        "equals": "byTemplate"
+      }
+    },
+    {
+      "label": "Error expression",
+      "description": "Expression to handle errors. Details in the <a href=\"https://docs.camunda.io/docs/components/connectors/use-connectors/#bpmn-errors\" target=\"_blank\">documentation</a>",
+      "group": "errors",
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "errorExpression"
+      }
+    }
+  ]
+}
