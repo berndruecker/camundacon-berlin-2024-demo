@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 jobs:
   sync_job:
     runs-on: ubuntu-latest
-    name: lalala
+    name: Synchronize milestones from Camunda Web Modeler
     permissions: write-all
     steps:
       - name: Sync
@@ -15,14 +15,9 @@ jobs:
           ZEEBE_CLIENT_SECRET: ${{ secrets.CAMUNDA_CLIENT_SECRET }}
           CAMUNDA_OAUTH_URL: 'https://login.cloud.camunda.io/oauth/token'
         with:
-          who-to-greet: 'Mona the Octocat'
           github-token:  ${{ secrets.GITHUB_TOKEN }}
           webmodeler-client-id:  ${{ secrets.CAMUNDA_WEBMODELER_CLIENT_ID }}
           webmodeler-client-secret:  ${{ secrets.CAMUNDA_WEBMODELER_CLIENT_SECRET }}
           camunda-client-id:  ${{ secrets.CAMUNDA_CLIENT_ID }}
           camunda-client-secret: ${{ secrets.CAMUNDA_CLIENT_SECRET }}
           camunda-zeebe-address: ${{ secrets.CAMUNDA_ZEEBE_ADDRESSS }}
-
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
