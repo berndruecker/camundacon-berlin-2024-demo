@@ -1,9 +1,9 @@
 on: [workflow_dispatch]
 
 jobs:
-  sync_job:
+  deployment:
     runs-on: ubuntu-latest
-    name: Synchronize milestones from Camunda Web Modeler
+    name: Deploy new milestones from Camunda Web Modeler
     permissions: write-all
     steps:
       - name: Sync
